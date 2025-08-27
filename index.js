@@ -13,14 +13,14 @@ function makeCode(){
 
 function text(){
 	const r = Math.random()
-	if(r < 0.1){
+	if(r < 0.2){
 		return `Your code is ${makeCode()}. NEVER share this code.`
-	} else if (r < 0.2){
+	} else if (r < 0.4){
 		return `DON'T share. Your code is ${makeCode()}.`
-	} else if(r < 0.3){
+	} else if(r < 0.6){
 		return `Your code is ${makeCode()}.`
 	}else{
-		return makeString();
+		return makeCode();
 	}
 }
 
