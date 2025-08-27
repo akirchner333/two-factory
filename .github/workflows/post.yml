@@ -1,8 +1,7 @@
 on:
-  workflow_dispatch:
   schedule:
-    - cron: "56 * * * *"
-
+    - cron: "2 * * * *"
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
