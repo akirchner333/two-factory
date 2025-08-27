@@ -11,6 +11,19 @@ function makeCode(){
 	}
 }
 
+function text(){
+	const r = Math.random()
+	if(r < 0.1){
+		return `Your code is ${makeCode()}. NEVER share this code.`
+	} else if (r < 0.2){
+		return `DON'T share. Your code is ${makeCode()}.`
+	} else if(r < 0.3){
+		return `Your code is ${makeCode()}.`
+	}else{
+		return makeString();
+	}
+}
+
 dotenv.config();
 
 const agent = new BskyAgent({
@@ -23,7 +36,7 @@ async function main() {
 		password: process.env.BLUESKY_PASSWORD
 	});
 	await agent.post({
-		text: `Your code is ${makeCode()}.`
+		text: text()
 	});
 	console.log("posted")
 }
