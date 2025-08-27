@@ -1,0 +1,11 @@
+{
+  "name": "twofactory",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@atproto/api": "^0.16.3",
+    "dotenv": "^17.2.1"
+  },
+  "type": "module"
+}
