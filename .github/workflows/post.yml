@@ -13,8 +13,12 @@ jobs:
         with:
           node-version-file: ".nvmrc"
       - run: yarn install
-      - name: Send post
-        run: yarn run post
+      - name: Create .env and post
+        run: |
+          touch .env
+          echo BLUESKY_USERNAME=$BLUESKY_USERNAME >> .env
+          echo BLUESKY_PASSWORD=$BLUESKY_PASSWORD >> .env
+          yarn run post
         env:
           BLUESKY_USERNAME: ${{ secrets.BLUESKY_USERNAME }}
           BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
