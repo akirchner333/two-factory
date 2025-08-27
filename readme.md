@@ -1,0 +1,1 @@
+A profoundly stupid bsky bot. Posts a fake auth code every hour at [@two-factory.bsky.social](https://bsky.app/profile/two-factory.bsky.social).
