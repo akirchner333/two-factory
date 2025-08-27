@@ -18,7 +18,6 @@ const agent = new BskyAgent({
 });
 
 async function main() {
-	console.log("This is the username", process.env.BLUESKY_USERNAME)
 	await agent.login({
 		identifier: process.env.BLUESKY_USERNAME,
 		password: process.env.BLUESKY_PASSWORD
